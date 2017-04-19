@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -29,20 +30,14 @@
       <nav class="main-menu">
         <div class="menu-catalog">
           <a href="#">Каталог товаров</a>
-          <div class="catalog-list">
-            <ul>
-              <li><a href="#">Виртуальная реальность</a></li>
-              <li><a href="#">Моноподы для селфи</a></li>
-              <li><a href="#">Экшн-камеры</a></li>
-            </ul>
-            <ul>
-              <li><a href="#">Фитнес-браслеты</a></li>
-              <li><a href="#">Умные часы</a></li>
-            </ul>
-            <ul>
-              <li><a href="#">Квадрокоптеры</a></li>
-            </ul>
-          </div><!-- catalog-list -->
+          <ul class="catalog-list">
+            <li><a href="#">Виртуальная реальность</a></li>
+            <li><a href="#">Моноподы для селфи</a></li>
+            <li><a href="#">Экшн-камеры</a></li>
+            <li><a href="#">Фитнес-браслеты</a></li>
+            <li><a href="#">Умные часы</a></li>
+            <li><a href="#">Квадрокоптеры</a></li>
+          </ul>
         </div><!-- menu-catalog -->
 
         <ul class="menu-list">
@@ -71,7 +66,7 @@
     <div class="slider-inner">
       <div class="slider-item">
         <div class="slider-image">
-          <img src="img/slider-1.png" width="384" height="486" alt="Палка для селфи">
+          <img src="img/slider-selfi.png" width="384" height="486" alt="Палка для селфи">
         </div>
         <div class="slider-text">
           <h2 class="slider-title">Делай селфи,<br>как Бен Стиллер!</h2>
@@ -96,7 +91,7 @@
 
       <div class="slider-item">
         <div class="slider-image">
-          <img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет">
+          <img src="img/slider-bracelet.png" width="345" height="485" alt="Фитнес-браслет">
         </div>
         <div class="slider-text">
           <h2 class="slider-title">Худеем<br>правильно!</h2>
@@ -113,7 +108,7 @@
 
       <div class="slider-item">
         <div class="slider-image">
-          <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
+          <img src="img/slider-copter.png" width="526" height="334" alt="Квадрокоптер">
         </div>
         <div class="slider-text">
           <h2 class="slider-title">Порхает как бабочка,<br>жалит как пчела!</h2>
@@ -139,32 +134,32 @@
 
   <section class="popular container">
     <a href="#">
-      <img src="img/popular-1.png" width="160" height="160" alt="Виртуальная реальность">
+      <img src="img/popular-3d.png" width="160" height="160" alt="Виртуальная реальность">
       <h3>Виртуальная реальность</h3>
     </a>
 
     <a href="#">
-      <img src="img/popular-2.png" width="160" height="160" alt="Моноподы для селфи">
+      <img src="img/popular-monopod.png" width="160" height="160" alt="Моноподы для селфи">
       <h3>Моноподы<br>для селфи</h3>
     </a>
 
     <a href="#">
-      <img src="img/popular-3.png" width="160" height="160" alt="Экшн-камеры">
+      <img src="img/popular-camera.png" width="160" height="160" alt="Экшн-камеры">
       <h3>Экшн-камеры</h3>
     </a>
 
     <a href="#">
-      <img src="img/popular-4.png" width="160" height="160" alt="Фитнес-браслеты">
+      <img src="img/popular-bracelet.png" width="160" height="160" alt="Фитнес-браслеты">
       <h3>Фитнес-браслеты</h3>
     </a>
 
     <a href="#">
-      <img src="img/popular-5.png" width="160" height="160" alt="Умные часы">
+      <img src="img/popular-watch.png" width="160" height="160" alt="Умные часы">
       <h3>Умные часы</h3>
     </a>
 
     <a href="#">
-      <img src="img/popular-6.png" width="160" height="160" alt="Квадрокоптеры">
+      <img src="img/popular-copter.png" width="160" height="160" alt="Квадрокоптеры">
       <h3>Квадрокоптеры</h3>
     </a>
   </section><!-- popular -->
@@ -209,10 +204,10 @@
   <!-- _____________Клиенты_____________-->
 
   <section class="clients container">
-    <a href="#"><img src="img/logo-1.png" width="260" height="100" alt="DJI"></a>
-    <a href="#"><img src="img/logo-2.png" width="260" height="100" alt="Gadgets"></a>
-    <a href="#"><img src="img/logo-3.png" width="260" height="100" alt="GoPro"></a>
-    <a href="#"><img src="img/logo-4.png" width="260" height="100" alt="Vive"></a>
+    <a href="#"><img src="img/logo-dji.png" width="260" height="100" alt="DJI"></a>
+    <a href="#"><img src="img/logo-gadgets.png" width="260" height="100" alt="Gadgets"></a>
+    <a href="#"><img src="img/logo-gopro.png" width="260" height="100" alt="GoPro"></a>
+    <a href="#"><img src="img/logo-vive.png" width="260" height="100" alt="Vive"></a>
   </section><!-- clients -->
 
 
@@ -234,7 +229,7 @@
     <div class="content-right">
       <h2 class="content-title">Контакты</h2>
       <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-      <a href="#"><img src="img/map.png" width="560" height="222" alt="Карта"></a>
+      <a href="#"><img src="img/map.jpg" width="560" height="222" alt="Карта"></a>
       <a class="btn" href="#">Напишите нам</a>
     </div><!-- content-rigth -->
   </section><!-- main-content -->
