@@ -18,33 +18,39 @@
     <header class="page-header">
       <div class="header-logo"><a href="index.html">DEVICE</a></div>
 
-      <div class="header-link">
+      <div class="header-top-link">
         <form class="search" action="https://echo.htmlacademy.ru" method="get">
           <input type="search" name="search" placeholder="Поиск по сайту">
           <input type="submit" value="Найти">
         </form>
-        <ul class="user-block">
-          <li><a href="#">Валентин Петухов</a></li>
-          <li><a href="#">Выйти</a></li>
-          <li><a href="#">Корзина</a></li>
+        <ul class="header-user-block">
+          <li class="user-name"><a href="#">Валентин Петухов</a></li>
+          <li class="user-out"><a href="#">Выйти</a></li>
           <li><a href="#">Сравнить</a></li>
+          <li><a href="#">Корзина</a></li>
         </ul>
       </div><!-- header-link -->
 
       <nav class="main-menu">
         <div class="menu-catalog">
           <a href="#">Каталог товаров</a>
-          <ul class="catalog-link">
-            <li><a href="#">Виртуальная реальность</a></li>
-            <li><a href="#">Моноподы для селфи</a></li>
-            <li><a href="#">Экшн-камеры</a></li>
-            <li><a href="#">Фитнес-браслеты</a></li>
-            <li><a href="#">Умные часы</a></li>
-            <li><a href="#">Квадрокоптеры</a></li>
-          </ul>
+          <div class="catalog-hover-list">
+            <ul>
+              <li><a href="#">Виртуальная реальность</a></li>
+              <li><a href="#">Моноподы для селфи</a></li>
+              <li><a href="#">Экшн-камеры</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Фитнес-браслеты</a></li>
+              <li><a href="#">Умные часы</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Квадрокоптеры</a></li>
+            </ul>
+          </div>
         </div><!-- menu-catalog -->
 
-        <ul class="menu-services">
+        <ul class="header-menu-services">
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Гарантия</a></li>
           <li><a href="#">Контакты</a></li>
@@ -72,7 +78,7 @@
 
 
   <div class="container">
-    <main class="main-page">
+    <main class="page-main">
 
 
       <!--_________sidebar_________ -->
@@ -113,9 +119,9 @@
       </aside>
 
 
-      <!-- _________product_________ -->
+      <!-- _________page-catalog_________ -->
 
-      <section class="product">
+      <section class="catalog">
         <div class="sorting">
           <h3 class="sorting-title">Сортировка:</h3>
           <ul class="sorting-list">
@@ -124,76 +130,76 @@
             <li><a href="#">По популярности</a></li>
           </ul>
           <ul class="sorting-arrow">
-            <li>
-              <a class="arrow-up" href="#"></a>
-            </li>
-            <li>
-              <a class="arrow-up" href="#"></a>
-            </li>
+            <li><a class="arrow-up" href="#"></a></li>
+            <li><a class="arrow-up" href="#"></a></li>
           </ul>
         </div><!--  sorting -->
 
-        <div class="product-wrapper">
-          <article class="product-item">
+        <div class="catalog-wrapper">
+          <article class="catalog-item">
             <img src="img/monopod-amateur.jpg" width="360" height="380" alt="Любительская селфи-палка">
-            <div class="product-name clearfix">
-              <h1 class="product-title"><a href="#">Любительская селфи-палка</a></h1>
-              <span>500 руб.</span>
+            <div class="catalog-item-info clearfix">
+              <h2 class="catalog-item-title"><a href="#">Любительская селфи-палка</a></h2>
+              <span class="catalog-item-price">500 руб.</span>
             </div>
-            <div class="product-hover">
+            <div class="catalog-item-hover">
               <a class="btn" href="#">В корзину</a>
               <a class="btn-compare" href="#">Добавить к сравнению</a>
             </div>
           </article>
 
-          <article class="product-item">
+          <article class="catalog-item">
             <img src="img/monopod-pro.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-            <div class="product-name clearfix">
-              <h1 class="product-title"><a href="#">Профессиональная селфи-палка</a></h1>
-              <span>1 500 руб.</span>
+            <div class="catalog-item-info clearfix">
+              <h2 class="catalog-item-title"><a href="#">Профессиональная<br>селфи-палка</a></h2>
+              <span class="catalog-item-price">1 500 руб.</span>
             </div>
-            <div class="product-hover">
+            <div class="catalog-item-hover">
               <a class="btn" href="#">В корзину</a>
               <a class="btn-compare" href="#">Добавить к сравнению</a>
             </div>
           </article>
 
-          <article class="product-item">
+          <article class="catalog-item">
             <img src="img/monopod-unsinkable.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-            <div class="product-name clearfix">
-              <h1 class="product-title"><a href="#">Непотопляемая селфи-палка</a></h1>
-              <span>2 500 руб.</span>
+            <div class="catalog-item-info clearfix">
+              <h2 class="catalog-item-title"><a href="#">Непотопляемая селфи-палка</a></h2>
+              <span  class="catalog-item-price">2 500 руб.</span>
             </div>
-            <div class="product-hover">
+            <div class="catalog-item-hover">
               <a class="btn" href="#">В корзину</a>
               <a class="btn-compare" href="#">Добавить к сравнению</a>
             </div>
           </article>
 
-          <article class="product-item">
+          <article class="catalog-item">
             <img class="new" src="img/monopod-hand.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-            <div class="product-name clearfix">
-              <h1 class="product-title"><a href="#">Селфи-палка «Следуй за мной»</a></h1>
-              <span>4 900 руб.</span>
+            <div class="catalog-item-info clearfix">
+              <h2 class="catalog-item-title"><a href="#">Селфи-палка «Следуй за мной»</a></h2>
+              <span  class="catalog-item-price">4 900 руб.</span>
             </div>
-            <div class="product-hover">
+            <div class="catalog-item-hover">
               <a class="btn" href="#">В корзину</a>
               <a class="btn-compare" href="#">Добавить к сравнению</a>
             </div>
           </article>
-        </div><!-- product-wrapper -->
-      </section><!-- product -->
+        </div><!-- page-catalog-wrapper -->
 
 
-      <!--_________pages_________ -->
+        <!--_________page-number_________ -->
 
-      <ul class="pages">
-        <li class="prev"><a href="#">Назад</a></li>
-        <li class="page-active"><a>1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li class="next"><a href="#">Вперед</a></li>
-      </ul>
+        <ul class="page-number">
+          <li class="prev"><a href="#">Назад</a></li>
+          <li class="page-active"><a>1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li class="next"><a href="#">Вперед</a></li>
+        </ul>
+
+      </section><!-- page-catalog -->
+
+
+
 
     </main>
   </div>
