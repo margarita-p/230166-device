@@ -2,8 +2,7 @@
   font-family: "Gilroy ExtraBold";
   font-weight: normal;
   font-style: normal;
-  src: local("Gilroy ExtraBold"),
-       url("../fonts/gilroyextrabold.woff2") format("woff2"),
+  src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
        url("../fonts/gilroyextrabold.woff2") format("woff"),
        url("../fonts/gilroyextrabold.ttf") format("ttf");
 }
@@ -12,8 +11,7 @@
   font-family: "Gilroy Light";
   font-weight: normal;
   font-style: normal;
-  src: local("Gilroy Light"),
-       url("../fonts/gilroylight.woff2") format("woff2"),
+  src: url("../fonts/gilroylight.woff2") format("woff2"),
        url("../fonts/gilroylight.woff2") format("woff"),
        url("../fonts/Gilroylight.ttf") format("ttf");
 }
@@ -31,14 +29,10 @@ body {
     line-height: 30px;
     font-weight: 300;
     color: #464646;
+  letter-spacing: 0.01;
   background-color: #fff;
-
-  background: url("../img/device-index.jpg") no-repeat top center;
 }
 
-.page {
-  background: url("../img/device-catalog.jpg") no-repeat top center;
-}
 
 .container {
   width: 1160px;
@@ -48,17 +42,16 @@ body {
 
 .main-header a,
 .page-header a,
-.main-footer a {
+.main-footer a,
+.page-footer a  {
   display: inline-block;
   padding: 9px 0;
-  font-family: "Open Sans", Arial, sans-sefif;
+  font-family: "Open Sans", Arial, sans-serif;
    font-size: 15px;
    line-height: 18px;
    font-weight: 300;
    color: #000;
   text-decoration: none;
-
-  background-color: rgba(0, 0, 255, 0.3);
 }
 
 *::before,
@@ -75,29 +68,39 @@ body {
 .page-header {
   margin-top: 40px;
   background-color: #f7e296;
+}
 
-  background-color: rgba(255, 0, 0, 0.3);
+/*_____________header-logo_________________*/
+
+.header-logo a {
+  display: block;
+  font-size: 0;
+  background: url("../img/logo-device2.png") no-repeat;
+  background-position: -1px 0;
 }
 
 .header-logo {
   position: relative;
-    top: -18px;
+    top: -19px;
     left: 60px;
-  width: 163px;
-  height: 34px;
+  width: 168px;
+  height: 36px;
   margin-bottom: 5px;
-  background: url(../img/logo-device.png) no-repeat top center;
 }
 
-.header-logo a {
-  font-size: 0;
+.page-header .header-logo:hover {
+  opacity: 0.6;
+}
+
+.page-header .header-logo:active {
+  opacity: 0.3;
 }
 
 /*______________header-top-link______________*/
 
 .header-top-link {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 
@@ -108,12 +111,10 @@ body {
   width: 440px;
   margin-left: 60px;
   margin-right: auto;
-
-  background-color: rgba(0, 255, 0, 0.3);
 }
 
 
-/*_____________Пользователь user-block___________*/
+/*__________Пользовательский user-block_________*/
 
 .header-user-block {
   display: flex;
@@ -122,38 +123,90 @@ body {
   margin-right: 60px;
   padding: 0;
   list-style: none;
-
-  background-color: rgba(0, 255, 0, 0.3);
 }
 
 .header-user-block li {
-  width: 100px;
-  height: 36px;
-  margin-right: 20px;
+  margin-right: 40px;
   text-align: center;
-
-  background-color: rgba(0, 255, 0, 0.5);
 }
 
-.header-user-block li:last-child {
-  margin-right: 0;
-  text-align: right;
+.header-user-block a {
+  position: relative;
+  padding-left: 22px;
 }
 
-.header-user-block .user-enter {
+.header-user-block a:hover {
+  opacity: 0.6;
+}
+
+.header-user-block a:active {
+  opacity: 0.3;
+}
+
+li.header-user-enter {
   margin-right: auto;
   text-align: left;
 }
 
-.header-user-block .user-name  {
-  width: 160px;
-  text-align: left;
+.header-user-enter a {
+  padding-left: 25px;
 }
 
-.header-user-block .user-out {
+li.header-user-name  {
+  text-align: left;
+  margin-right: 20px;
+}
+
+li.header-user-out {
   width: 80px;
   text-align: left;
+  margin-right: auto;
 }
+
+.header-user-out a {
+  padding-left: 0;
+}
+
+li.header-user-cart {
+  margin-right: 0;
+  text-align: right;
+}
+
+.header-user-out a {
+  opacity: 0.3;
+}
+
+.header-user-out a:hover {
+  opacity: 0.6;
+}
+
+.header-user-out a:active {
+  opacity: 1;
+}
+
+/*___________Иконки___________*/
+
+.header-user-block a::before {
+  position: absolute;
+    left: 0;
+    top: 12px;
+  width: 13px;
+  height: 13px;
+  background: url("../img/icon-link.png") no-repeat;
+}
+
+.header-user-out a::before {
+  display: none;
+}
+
+.header-user-compare a::before {
+  background-position: 0 -13px;
+}
+
+.header-user-cart a::before {
+  background-position: 0 -29px;
+}
+
 
 
 /*____________Главное меню main-menu____________*/
@@ -161,47 +214,6 @@ body {
 .main-menu {
   display: flex;
   padding-bottom: 156px;
-}
-
-.menu-catalog  {
-  margin-right: auto;
-
-  background-color: rgba(0, 255, 0, 0.3);
-}
-
-.menu-catalog > a {
-  width: 260px;
-  margin-left: 60px;
-}
-
-.catalog-hover-list {
-  display: none;
-  width: 1040px;
-  margin: 0;
-  padding: 24px 60px;
-  z-index: 100;
-  background-color: #f7e296;
-
-  background-color: rgba(0, 255, 0, 0.3);
-}
-
-.catalog-hover-list ul {
-  width: 160px;
-  margin: 0;
-  margin-right: 40px;
-  padding: 0;
-  list-style: none;
-
-  background-color: rgba(0, 255, 0, 0.5);
-}
-
-.catalog-hover-list ul:first-child {
-  width: 200px;
-}
-
-.menu-catalog a:hover ~ .catalog-hover-list {
-  position: absolute;
-  display: flex;
 }
 
 .menu-catalog > a,
@@ -214,6 +226,50 @@ body {
   text-decoration: none;
 }
 
+
+/*_____________Католог товаров_____________*/
+
+.menu-catalog  {
+  margin-right: auto;
+}
+
+.menu-catalog > a {
+  width: 260px;
+  margin-left: 60px;
+}
+
+
+/*___раскрывающееся меню католога товаров____*/
+
+.catalog-hover-list {
+  display: none;
+  width: 1040px;
+  margin: 0;
+  padding: 24px 60px;
+  z-index: 100;
+  background-color: #f7e296;
+}
+
+.catalog-hover-list ul {
+  width: 160px;
+  margin: 0;
+  margin-right: 40px;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog-hover-list ul:first-child {
+  width: 200px;
+}
+
+.menu-catalog a:hover ~ .catalog-hover-list {
+  position: absolute;
+  display: flex;
+}
+
+
+/*___________меню услуг______________*/
+
 .header-menu-services {
   display: flex;
   width: 500px;
@@ -221,8 +277,6 @@ body {
   margin: 0;
   margin-right: 60px;
   list-style: none;
-
-  background-color: rgba(0, 255, 0, 0.3);
 }
 
 .header-menu-services li {
@@ -230,8 +284,6 @@ body {
   height: 38px;
   margin-right: 20px;
   text-align: left;
-
-  background-color: rgba(0, 255, 0, 0.5);
 }
 
 .header-menu-services li:last-child {
@@ -239,6 +291,9 @@ body {
   margin-left: auto;
   text-align: right;
 }
+
+
+/*высота для хедера внутренней страницы*/
 
 .page-header .main-menu {
   padding-bottom: 44px;
@@ -248,13 +303,12 @@ body {
 
 
 
- /*_______________slider_______________ */
+ /*__________________slider_________________ */
 
 .slider {
   position: relative;
   height: 430px;
   margin-bottom: 51px;
-
 }
 
 .slider-inner {
@@ -263,8 +317,6 @@ body {
   width: 1160px;
   height: 540px;
   overflow: hidden;
-  background-color: rgba(0, 255, 0, 0.3);
-
 }
 
 .slider-item {
@@ -275,6 +327,8 @@ body {
   display: none;
 }
 
+/*_________переключатели__________*/
+
 .slider-control {
   display: flex;
   position: absolute;
@@ -283,18 +337,19 @@ body {
   width: 160px;
   height: 10px;
   z-index: 10;
-
-  background-color: rgba(0, 255, 0, 0.3);
 }
 
 .slider-control label {
-  display: flex;
   width: 4px;
   height: 4px;
   margin-right: 23px;
-  border: 3px solid #d0d0d0;
+  border: 3px solid #b2b2b2;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.slider-control label:hover {
+  border: 3px solid #999999;
 }
 
 /*___________Фото слайда_______________*/
@@ -305,6 +360,37 @@ body {
   text-align: center;
 }
 
+.slider-item:nth-child(1) img {
+  margin-left: 5px;
+}
+
+.slider-item:nth-child(2) img {
+  margin-top: 10px;
+  margin-left: 17px;
+}
+
+.slider-item:nth-child(3) img {
+  margin-top: 65px;
+  margin-left: 30px;
+}
+
+/*___________Текст слайда_______________*/
+
+.slider-text {
+  position: relative;
+  width: 500px;
+}
+
+.slider-text p {
+  margin: 0;
+  margin-bottom: 10px;
+  padding-right: 19px;
+}
+
+.slider-description {
+  margin-bottom: 20px;
+  padding-right: 20px;
+}
 
 /*_____________Заголовок слайда_____________*/
 
@@ -317,23 +403,20 @@ body {
     line-height: 56px;
     letter-spacing: 0.01em;
   color: 000;
-
-  color: rgba(0, 0, 255, 0.3);
 }
 
 /*чтоб влез заголовок на последнем слайде*/
-.slider-item:last-child .slider-title {
-  letter-spacing: 0.009em;
+.slider-text:last-child  {
+  width: 510px;
 }
 
 .slider-title::before {
   position: relative;
-    top: -34px;
+    top: -35px;
   display: block;
   width: 100px;
   height: 7px;
-
-  background-color: rgba(0, 0, 255, 0.3);
+  background-color: #fff;
 }
 
 /*______________Номер слайда_______________*/
@@ -341,7 +424,7 @@ body {
 .slider-item::before {
   position: absolute;
     top: 60px;
-    right: 48px;
+    right: 46px;
   font-family: "Gilroy Extrabold";
     font-size: 179.2px;
     letter-spacing: 0.01em;
@@ -360,22 +443,7 @@ body {
   content: "03";
 }
 
-/*___________Текст слайда_______________*/
 
-.slider-text {
-  position: relative;
-  width: 500px;
-}
-
-.slider-text p {
-  margin: 0;
-  margin-bottom: 10px;
-}
-
-.slider-description {
-  margin-bottom: 20px;
-  padding-right: 20px;
-}
 
 /*____________________кнопка слайдера_____________________*/
 
@@ -396,33 +464,27 @@ body {
   font-size: 0;
 }
 
-/*.slider-features p {
-  margin: 0;
-}*/
-
 .slider-features li {
   margin-right: auto;
-
-  background-color: rgba(0, 255, 0, 0.5);
 }
 
 .slider-feature-value {
   font-family: "Gilroy Light";
     font-size: 36px;
-    line-height: 38px;
+    line-height: 40px;
     letter-spacing: 0.01em;
 }
 
 .slider-feature-info {
   font-family: "Open Sans", Arial, sans-sefif;
     font-size: 13px;
-    line-height: 20px;
+    line-height: 18px;
     font-weight: 300;
     letter-spacing: 0.01em;
 }
 
 .slider-features.two-column li {
-  margin-right: 45px;
+  margin-right: 30px;
 }
 
 /*________________Переключение слайдов_____________*/
@@ -450,10 +512,10 @@ body {
 }
 
 .popular a {
+  position: relative;
   margin-right: 40px;
   text-decoration: none;
   color: #000;
-
 }
 
 .popular img {
@@ -461,7 +523,24 @@ body {
   height: 160px;
   margin-bottom: 8px;
   /*background-color: #f7e296;*/
-  background-color: rgba(0, 255, 0, 0.3);
+}
+
+.popular a::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 160px;
+  height: 160px;
+  background: #f7e296;
+  z-index: -1;
+}
+
+.popular a:hover::after {
+  background-color: #f0c52e;
+}
+
+.popular img:active {
+  filter: opacity(0.3);
 }
 
 .popular h3 {
@@ -477,10 +556,8 @@ body {
 .services {
   position: relative;
   height: 288px;
-  background-color: #e5e5e5;
   margin-bottom: 94px;
-
-  background-color: rgba(0, 255, 0, 0.3);
+  background-color: #e5e5e5;
 }
 
 .services .container {
@@ -488,23 +565,22 @@ body {
   align-items: flex-start;
 }
 
-
 .services-inner {
   position: relative;
     top: -30px;
-  overflow: hidden;
-  width: 450px;
   height: auto;
-  background-color: rgba(0, 255, 0, 0.3);
 }
 
 .services-item {
   display: none;
+  width: 450px;
 }
 
 .services input {
   display: none;
 }
+
+/*________Переключатели_________*/
 
 .services-control {
   position: relative;
@@ -513,12 +589,8 @@ body {
   margin-right: 118px;
   padding-top: 80px;
   padding-bottom: 45px;
-
-  border-right: 7px solid red;
+  border-right: 7px solid #000;
   z-index: 10;
-
-  background-color: rgba(0, 255, 0, 0.3);
-
 }
 
 .services-control label {
@@ -534,21 +606,17 @@ body {
     letter-spacing: 0.2em;
   color: #000;
   text-align: center;
-
-
   text-transform: uppercase;
   text-decoration: none;
+
   transition: color 0.2s;
   cursor: pointer;
-
-  background-color: rgba(255, 0, 0, 0.3);
 }
 
 .services-control label::after {
   content: "";
   position: absolute;
     top: 16px;
-    right: 0;
     left: 0;
   width: 160px;
   height: 8px;
@@ -563,6 +631,8 @@ body {
   background-color: #f0c52e;
 }
 
+/*__________Заголовок__________*/
+
 .services-title {
   margin: 0;
   margin-bottom: 25px;
@@ -571,6 +641,37 @@ body {
     line-height: 56px;
     letter-spacing: 0.01em;
   color: 000;
+}
+
+/*________Картинки для слайдов________*/
+
+.services-item::after {
+  position: absolute;
+    right: 0px;
+  display: block;
+  width: 180px;
+  height: 200px;
+}
+
+.services-item:nth-child(1)::after {
+  top: 15px;
+  right: -269px;
+  background: url("../img/services-sprite.png") no-repeat;
+}
+
+.services-item:nth-child(2)::after {
+  top: -14px;
+  right: -271px;
+  background: url("../img/services-sprite.png") no-repeat;
+  background-position: 0 -247px;
+}
+
+
+.services-item:nth-child(3)::after {
+  top: -18px;
+  right: -258px;
+  background: url("../img/services-sprite.png") no-repeat;
+  background-position: 0 -505px;
 }
 
 
@@ -604,12 +705,13 @@ body {
 
 .clients {
   display: flex;
-  margin-bottom: 78px;
+  margin-bottom: 94px;
   font-size: 0;
 }
 
 .clients a {
   width: 260px;
+  height: 100px;
   margin-right: 40px;
 }
 
@@ -624,40 +726,31 @@ body {
 .content-left {
   width: 475px;
   margin-right: auto;
-
-  background-color: rgba(0, 255, 0, 0.3);
 }
 
 .content-right {
   width: 560px;
-
-  background-color: rgba(0, 255, 0, 0.3);
 }
 
 .content-title {
   margin: 0;
-  margin-top: 41px;
+  margin-top: 40px;
   margin-bottom: 40px;
   font-family: "Gilroy Extrabold";
     font-size: 47px;
-    line-height: 56px;
+    line-height: 57px;
     letter-spacing: 0.01em;
-  color: 000;
-  z-index: 1;
   color: #000;
-
-  color: rgba(0, 0, 255, 0.3);
 }
 
 .content-title::before {
   position: relative;
-    top: -41px;
+    top: -40px;
   display: block;
   width: 80px;
   height: 7px;
+  background-color: #000;
   z-index: 10;
-
-  background-color: rgba(0, 0, 255, 0.3);
 }
 
 .main-content p {
@@ -683,7 +776,6 @@ body {
 
 .content-list li::before {
   position: absolute;
-    /*top: 10px;*/
     left: 0px;
   width: 4px;
   height: 4px;
@@ -701,42 +793,83 @@ body {
   margin-top: 10px;
 }
 
+
 /*_________________main-footer________________________*/
+
+.main-footer,
+.page-footer {
+  padding-bottom: 64px;
+  color: #fff;
+  background-color: #464646;
+}
 
 .main-footer {
   margin-top: 60px;
-  padding: 60px 0;
-  color: #fff;
-  background-color: #464646;
-
-  background-color: rgba(0, 255, 0, 0.3);
 }
 
-.main-footer a {
+.main-footer a,
+.page-footer a {
   color: #fff;
 }
 
-.main-footer .container {
+.main-footer .container,
+.page-footer .container {
   display: flex;
 }
 
-.footer-right {
-  width: 360px;
 
-  background-color: rgba(0, 255, 0, 0.3);
+/*______________footer-right______________*/
+
+.footer-right {
+  width: 340px;
+  margin-top: 65px;
+  margin-right: 20px;
 }
+
+.footer-logo {
+  width: 168px;
+  height: 36px;
+  margin-bottom: 30px;
+}
+
+.footer-logo a {
+  display: block;
+  font-size: 0;
+  background: url("../img/logo-device2.png") no-repeat center;
+  background-position: -1px -50px;
+}
+
+.footer-logo::after {
+  display: block;
+  position: relative;
+    top: 145px;
+    left: 0;
+  width: 80px;
+  height: 7px;
+  background-color: #ffc600;
+}
+
+.page-footer .footer-logo:hover {
+  opacity: 0.6;
+}
+
+.page-footer .footer-logo:active {
+  opacity: 0.3;
+}
+
+
+/*______________footer-center______________*/
 
 .footer-center {
   width: 440px;
-  align-self: flex-end;
-
-  background-color: rgba(255, 0, 0, 0.3);
+  margin-top: 130px;
 }
 
 .footer-menu {
   display: flex;
   justify-content: center;
   margin: 0;
+  margin-bottom: 52px;
   padding: 0;
   list-style: none;
 }
@@ -750,11 +883,13 @@ body {
 }
 
 .footer-menu a {
-  font-family: "Gilroy ExtraBold";
+  font-family: "Gilroy Extrabold";
     font-size: 18px;
     line-height: 20px;
     letter-spacing: 0.2em;
   text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
 }
 
 .footer-social {
@@ -762,23 +897,122 @@ body {
   justify-content: center;
 }
 
-.footer-left {
-  width: 360px;
-  text-align: right;
-
-  background-color: rgba(0, 255, 0, 0.3);
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  background: url("../img/social-btn.png") no-repeat;
+  opacity: 0.3;
 }
 
-.footer-link {
+.footer-social a:last-child {
+  margin-right: 0;
+}
+
+.footer-social a:hover {
+  opacity: 0.6;
+}
+
+.footer-social a:active {
+  opacity: 0.1;
+}
+
+.footer-social a:nth-child(2) {
+  background-position: -54px 0;
+}
+
+.footer-social a:nth-child(3) {
+  background-position: -108px 0;
+}
+
+/*______________footer-left______________*/
+
+
+.footer-left {
+  width: 340px;
+  margin-top: 60px;
+  margin-left: 20px;
+  text-align: right;
+}
+
+.footer-user-block {
   display: flex;
   justify-content: flex-end;
   margin: 0;
+  margin-bottom: 35px;
   padding: 0;
   list-style: none;
 }
 
-.footer-link li {
-  margin-left: 35px;
+.footer-user-block li {
+  margin-left: 40px;
+  text-align: right;
+}
+
+.footer-user-block a {
+  position: relative;
+  padding-left: 22px;
+}
+
+.footer-user-block a:hover {
+  opacity: 0.6;
+}
+
+.footer-user-block a:active {
+  opacity: 0.3;
+}
+
+
+
+/*___________Иконки___________*/
+
+.footer-user-block a::before {
+  position: absolute;
+    left: 0;
+    top: 11px;
+  width: 13px;
+  height: 13px;
+  background: url("../img/icon-link.png") no-repeat;
+}
+
+.footer-user-enter a::before,
+.footer-user-out a::before {
+  background-position: 0 -44px;
+}
+
+.footer-user-compare a::before {
+  background-position: 0 -59px;
+}
+
+.footer-user-cart a::before {
+  background-position: 0 -75px;
+}
+
+/*footer-left phone*/
+
+.footer-left .phone {
+  margin-bottom: 50px;
+}
+
+/*_________logo-htmlacademy__________*/
+
+a.logo-htmlacademy {
+  display: inline-block;
+  width: 27px;
+  height: 34px;
+  font-size: 0;
+  background: url("../img/logo-htmlacademy.png") no-repeat center;
+}
+
+.logo-htmlacademy:hover {
+  opacity: 0.6;
+}
+
+.logo-htmlacademy:active {
+  opacity: 0.3;
 }
 
 
@@ -786,13 +1020,12 @@ body {
 /*____________________________________________________________*/
 /*______________внутренняя страница________________________*/
 
+
+
 .page-title {
   margin-top: 37px;
   margin-bottom: 43px;
   margin-left: 60px;
-
-  background-color: rgba(0, 255, 0, 0.3);
-
 }
 
 .page-title h1 {
@@ -802,8 +1035,6 @@ body {
     font-size: 47px;
     line-height: 49px;
     letter-spacing: 0.01em;
-
-  color: rgba(0, 255, 0, 0.5);
 }
 
 .page-title .breadcrumbs {
@@ -815,42 +1046,89 @@ body {
 
 .page-main {
   display: flex;
-  margin: 0;
-  padding: 0;
 }
 
-.page-main .sidebar {
-  width: 330px;
-
-  background-color: rgba(255, 0, 0, 0.3);
+.page-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-.catalog {
-  display: flex;
-  flex-direction: column;
-  width: 830px;
-  margin: 0;
-  padding: 0;
 
-  background-color: rgba(0, 255, 0, 0.3);
+
+/*______________________сайдбар______________________*/
+
+.page-sidebar {
+  position: relative;
+  width: 200px;
+  padding-left: 60px;
+  padding-right: 70px;
 }
+
+.page-sidebar-title {
+  height: 70px;
+  margin-top: 0;
+  font-family: "Gilroy Extrabold";
+    font-size: 18px;
+    line-height: 70px;
+    letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.page-sidebar-title::after {
+  display: block;
+  position: absolute;
+    top: 0;
+    right: 0;
+  width: 2000px;
+  height: 70px;
+  background-color: #dbdbdb;
+  z-index: -1;
+}
+
+.page-sidebar::before {
+  display: block;
+  position: absolute;
+    top: 0;
+    right: 0;
+  width: 2000px;
+  height: 100%;
+  background-color: #ebebeb;
+  z-index: -2;
+}
+
+.filter-form .btn {
+  width: 200px;
+}
+
+/*_________________Сортировка___________________*/
 
 .sorting {
   display: flex;
   align-items: center;
+  position: relative;
   width: 830px;
   height: 70px;
-  background-color: rgba(0, 0, 255, 0.3);
+}
+
+.sorting::after {
+  display: block;
+  position: absolute;
+    top: 0;
+    left: 0;
+  width: 4000px;
+  height: 70px;
+  background-color: #ebebeb;
+  z-index: -1;
 }
 
 .sorting-title {
-
-font-family: "Gilroy Extrabold";
-  font-size: 18px;
-  line-height: 20px;
-  letter-spacing: 0.2em;
-text-transform: uppercase;
-text-decoration: none;
+  margin-left: 70px;
+  font-family: "Gilroy Extrabold";
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 .sorting-list {
@@ -861,23 +1139,41 @@ text-decoration: none;
   display: flex;
 }
 
+
+
+/*__________________каталог__________________*/
+
+.catalog {
+  width: 830px;
+  margin: 0;
+  padding: 0;
+}
+
 .catalog-wrapper {
   display: flex;
     flex-wrap: wrap;
   margin-top: 68px;
   margin-left: 70px;
-
-  background-color: rgba(255, 255, 0, 0.3);
 }
+
+
+/*____________Карточка товара_____________*/
 
 .catalog-item {
   width: 360px;
   margin-right: 40px;
-  margin-bottom: 36px;
+  margin-bottom: 33px;
 }
 
 .catalog-item:nth-child(2n) {
   margin-right: 0;
+}
+
+
+.catalog-item img {
+  width: 360px;
+  height: 380px;
+  margin-bottom: 24px;
 }
 
 .catalog-item-hover {
@@ -886,7 +1182,6 @@ text-decoration: none;
 
 .catalog-item-info {
   display: flex;
-  margin-top: 26px;
 }
 
 .catalog-item-title {
@@ -902,8 +1197,6 @@ text-decoration: none;
 .catalog-item-title a {
   color: #000;
   text-decoration: none;
-
-  color: rgba(0, 255, 0, 0.5);
 }
 
 .catalog-item-price {
@@ -913,17 +1206,16 @@ text-decoration: none;
   text-align: right;
 }
 
-
 .page-number {
   display: flex;
   align-items: center;
   height: 70px;
   margin: 0;
   margin-left: 70px;
+  margin-bottom: 72px;
   padding: 0;
   list-style: none;
-
-  background-color: rgba(0, 255, 0, 0.3);
+  background-color: #ebebeb;
 }
 
 
@@ -937,7 +1229,7 @@ text-decoration: none;
 .btn {
   position: relative;
   display: inline-block;
-  min-width: 260px;
+  width: 260px;
   margin: 40px 0;
   padding: 10px 0;
   font-family: "Gilroy ExtraBold";
@@ -948,6 +1240,10 @@ text-decoration: none;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  background: none;
+  outline: none;
+  box-shadow: none;
+  border: none;
   transition: color 0.2s;
 }
 
@@ -972,3 +1268,7 @@ text-decoration: none;
 .btn:active {
   color: rgba(0, 0, 0, 0.5);
 }
+
+/*
+background: rgba(0, 255, 0, 0.3);
+*/
