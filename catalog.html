@@ -9,17 +9,17 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page">
+<body>
 
 
   <!--_________page-header_________ -->
 
   <div class="container">
-    <header class="page-header">
+    <header class="main-header page-header">
       <div class="header-logo"><a href="index.html">DEVICE</a></div>
 
       <div class="header-top-link">
-        <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
+        <form class="header-form-search" action="https://echo.htmlacademy.ru" method="get">
           <input type="search" name="search" placeholder="Поиск по сайту">
           <input type="submit" value="Найти">
         </form>
@@ -34,10 +34,10 @@
       <nav class="main-menu">
         <div class="menu-catalog">
           <a href="#">Каталог товаров</a>
-          <div class="catalog-hover-list">
+          <div class="menu-catalog-hover">
             <ul>
               <li><a href="#">Виртуальная реальность</a></li>
-              <li><a href="#">Моноподы для селфи</a></li>
+              <li><a href="catalog.html">Моноподы для селфи</a></li>
               <li><a href="#">Экшн-камеры</a></li>
             </ul>
             <ul>
@@ -84,9 +84,17 @@
           <h3 class="page-sidebar-title">Фильтр:</h3>
 
           <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset class="filter-price">
+            <fieldset class="filter-range">
               <h4 class="filter-title">Стоимость</h4>
-              <input type="range" id="amount" name="amount" min="0" max="10000" value="5000" step="100">
+              <div class="filter-range-controls">
+                <div class="range-scale"><div style="width: 60%;" class="range-bar"></div></div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+              </div>
+              <div class="filter-range-value">
+                <label class="range-min-price">от <input type="text" name="min-price" value="0"></label>
+                <label class="range-max-price">до <input  type="text" name="max-price" value="5000"></label>
+              </div>
             </fieldset>
 
             <fieldset class="filter-color">
@@ -116,7 +124,7 @@
         </aside>
 
 
-        <!-- _________page-catalog_________ -->
+        <!-- _________catalog_________ -->
 
         <section class="catalog">
           <div class="sorting">
@@ -135,10 +143,10 @@
           <div class="catalog-wrapper">
             <article class="catalog-item">
               <img src="img/monopod-amateur.jpg" width="360" height="380" alt="Любительская селфи-палка">
-              <ul class="catalog-item-hover">
-                <li><a class="btn" href="#">В корзину</a></li>
-                <li><a class="btn-compare" href="#">Добавить к сравнению</a></li>
-              </ul>
+              <div class="catalog-item-hover">
+                <a class="btn" href="#">В корзину</a>
+                <a class="btn-compare" href="#">Добавить к сравнению</a>
+              </div>
               <div class="catalog-item-info">
                 <h2 class="catalog-item-title"><a href="#">Любительская селфи-палка</a></h2>
                 <span class="catalog-item-price">500 руб.</span>
@@ -147,10 +155,10 @@
 
             <article class="catalog-item">
               <img src="img/monopod-pro.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-              <ul class="catalog-item-hover">
-                <li><a class="btn" href="#">В корзину</a></li>
-                <li><a class="btn-compare" href="#">Добавить к сравнению</a></li>
-              </ul>
+              <div class="catalog-item-hover">
+                <a class="btn" href="#">В корзину</a>
+                <a class="btn-compare" href="#">Добавить к сравнению</a>
+              </div>
               <div class="catalog-item-info">
                 <h2 class="catalog-item-title"><a href="#">Профессиональная<br>селфи-палка</a></h2>
                 <span class="catalog-item-price">1 500 руб.</span>
@@ -159,22 +167,22 @@
 
             <article class="catalog-item">
               <img src="img/monopod-unsinkable.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-              <ul class="catalog-item-hover">
-                <li><a class="btn" href="#">В корзину</a></li>
-                <li><a class="btn-compare" href="#">Добавить к сравнению</a></li>
-              </ul>
+              <div class="catalog-item-hover">
+                <a class="btn" href="#">В корзину</a>
+                <a class="btn-compare" href="#">Добавить к сравнению</a>
+              </div>
               <div class="catalog-item-info">
                 <h2 class="catalog-item-title"><a href="#">Непотопляемая селфи-палка</a></h2>
                 <span  class="catalog-item-price">2 500 руб.</span>
               </div>
             </article>
 
-            <article class="catalog-item">
-              <img class="new" src="img/monopod-hand.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-              <ul class="catalog-item-hover">
-                <li><a class="btn" href="#">В корзину</a></li>
-                <li><a class="btn-compare" href="#">Добавить к сравнению</a></li>
-              </ul>
+            <article class="catalog-item catalog-item-new">
+              <img src="img/monopod-hand.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+              <div class="catalog-item-hover">
+                <a class="btn" href="#">В корзину</a>
+                <a class="btn-compare" href="#">Добавить к сравнению</a>
+              </div>
               <div class="catalog-item-info">
                 <h2 class="catalog-item-title"><a href="#">Селфи-палка «Следуй за мной»</a></h2>
                 <span  class="catalog-item-price">4 900 руб.</span>
@@ -202,7 +210,7 @@
 
   <!--_________main-footer_________ -->
 
-  <footer class="page-footer">
+  <footer class="main-footer page-footer">
     <div class="container">
       <section class="footer-right">
         <div class="footer-logo"><a href="index.html">DEVICE</a></div>

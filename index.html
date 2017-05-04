@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -16,7 +16,7 @@
       <div class="header-logo"><a>DEVICE</a></div>
 
       <div class="header-top-link">
-        <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
+        <form class="header-form-search" action="https://echo.htmlacademy.ru" method="get">
           <input type="search" name="search-field" placeholder="Поиск по сайту">
           <input type="submit" value="Найти">
         </form>
@@ -30,7 +30,7 @@
       <nav class="main-menu">
         <div class="menu-catalog">
           <a href="#">Каталог товаров</a>
-          <div class="catalog-hover-list">
+          <div class="menu-catalog-hover">
             <ul>
               <li><a href="#">Виртуальная реальность</a></li>
               <li><a href="catalog.html">Моноподы для селфи</a></li>
@@ -76,7 +76,7 @@
         <div class="slider-text">
           <h2 class="slider-title">Делай селфи,<br>как Бен Стиллер!</h2>
           <div class="slider-description">
-            <p>Самая длинная палка для селфи доступна в&nbsp;нашем магазине. Восемь (Восемь, Карл!) метров длиной и&nbsp;весом всего 5&nbsp;килограмм.</p>
+            <p>Самая длинная палка для селфи доступна в&nbsp;нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и&nbsp;весом всего 5&nbsp;килограмм.</p>
           </div>
           <a class="btn" href="#">Подробнее</a>
           <ul class="slider-features">
@@ -103,7 +103,7 @@
         <div class="slider-text">
           <h2 class="slider-title">Худеем<br>правильно!</h2>
           <div class="slider-description">
-            <p>Мотивирующие фитнес-браслеты помогут найти в&nbsp;себе силы не&nbsp;пропускать занятия и&nbsp;соблюдать диету.</p>
+            <p>Мотивирующие фитнес-браслеты помогут найти в&nbsp;себе силы<br> не&nbsp;пропускать занятия и&nbsp;соблюдать диету.</p>
           </div>
           <a class="btn" href="#">Подробнее</a>
           <ul class="slider-features">
@@ -122,10 +122,10 @@
         <div class="slider-text">
           <h2 class="slider-title">Порхает как бабочка,<br>жалит как пчела!</h2>
           <div class="slider-description">
-            <p>Этот обычный, на&nbsp;первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+            <p>Этот обычный, на&nbsp;первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
           </div>
           <a class="btn" href="#">Подробнее</a>
-          <ul class="slider-features two-column">
+          <ul class="slider-features">
             <li>
               <p class="slider-feature-value">800 м</p>
               <p class="slider-feature-info">Дальность полета</p>
@@ -283,6 +283,35 @@
 
     </div><!-- container -->
   </footer>
+
+
+  <!--_____________main-footer_____________ -->
+
+  <div class="modal-content-wrapper">
+    <div class="modal-shadow"></div>
+    <div class="modal-content">
+      <button class="modal-btn-close" type="button" title="Закрыть">Закрыть</button>
+      <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="modal-content-inner">
+          <label class="modal-right">Ваше имя:
+            <input type="text" name="modal-user" placeholder="Представьтесь, пожалуйста" required>
+          </label>
+          <label class="modal-left">Ваш e-mail:
+            <input type="email" class="modal-form-invalid" name="modal-mail" placeholder="Для отправки ответа" required>
+          </label>
+        </div>
+        <label>Текст письма:
+          <textarea name="modal-textarea" rows="7" placeholder="В свободной форме" required></textarea>
+        </label>
+        <button type="submit" class="btn">Отправить</button>
+      </form>
+    </div>
+  </div>
+  <div class="modal-content-map">
+    <button class="modal-btn-close" type="button" title="Закрыть">Закрыть</button>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931592807!3d55.687030980535816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1493895677979"
+    width="960" height="560" style="border:0" allowfullscreen></iframe>
+  </div>
 
 </body>
 
