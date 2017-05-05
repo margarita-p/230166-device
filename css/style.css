@@ -210,7 +210,7 @@ body {
 }
 
 
-/*ser-block*/
+/*user-block*/
 
 .header-user-block {
   display: flex;
@@ -611,30 +611,32 @@ li.header-user-cart {
 
 .popular a::after {
   position: absolute;
+    top: 0;
   display: block;
-  top: 0;
   width: 160px;
   height: 160px;
   background: #f7e296;
   z-index: -1;
 }
 
-.popular a:hover::after {
+.popular a:hover::after,
+.popular a:active::after {
   background-color: #f0c52e;
 }
 
-.popular img:active {
-  filter: opacity(0.3);
+.popular a:active > img,
+.popular a:active > img ~ .popular-title {
+  opacity: 0.3;
 }
 
-.popular h3 {
+.popular-title {
   font-family: "Gilroy", Arial, sans-serif;
     font-weight: 800;
     font-size: 18px;
     line-height: 20px;
     letter-spacing: 0.01em;
+  color: #000;
 }
-
 
 
 /*_______________services-slider_______________*/
@@ -1519,7 +1521,7 @@ a.sorting-active:active {
   text-align: right;
 }
 
-/*Новинка*/
+/*Новинка товара*/
 
 .catalog-item.catalog-item-new::before {
   content: "New";
@@ -1717,7 +1719,6 @@ a.paginator-next:active {
   margin-right: 15px;
   padding: 0;
   font-size: 0;
-  line-height: 0;
   background: url("../img/sprite.png") no-repeat;
   opacity: 0.3;
 }
@@ -1752,7 +1753,7 @@ a.paginator-next:active {
 .footer-left {
   width: 340px;
   margin-top: 60px;
-  margin-left: 20px;
+    margin-left: 20px;
   text-align: right;
 }
 
@@ -1875,7 +1876,7 @@ a.logo-htmlacademy {
     top: 50%;
     left: 50%;
 
-  /*display: none;*/
+  display: none;
   width: 960px;
   height: 554px;
   margin-left: -480px;
@@ -1918,8 +1919,8 @@ a.logo-htmlacademy {
   height: 55px;
   font-size: 0;
   background-color: rgba(240, 197, 46, 0.5);
-  border-radius: 50%;
   border: none;
+  border-radius: 50%;
   box-shadow: none;
   outline: none;
   cursor: pointer;
