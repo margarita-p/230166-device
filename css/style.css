@@ -159,7 +159,6 @@ a.main-header-logo {
   border: none;
     border-bottom: 2px solid transparent;
     border-top: 2px solid transparent;
-  outline: none;
   opacity: 0.3;
 }
 
@@ -188,7 +187,6 @@ a.main-header-logo {
   color: rgba(0, 0, 0, 1);
   background: none;
   border: 2px solid #000;
-  outline: none;
 }
 
 .header-form-search input[type="submit"]:hover {
@@ -2026,10 +2024,10 @@ a.main-footer-logo {
   vertical-align: top;
 
   background: none;
-  outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
   border: none;
+  outline: none;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
   cursor: pointer;
@@ -2139,7 +2137,6 @@ a.main-footer-logo {
     line-height: 18px;
   color: #464646;
   border: none;
-  outline: none;
   background-color: rgba(234, 234, 234, 0.5);
   resize: none;
 }
@@ -2220,7 +2217,7 @@ a.main-footer-logo {
   margin-left: -480px;
   margin-top: -280px;
 
-  background: #fff url("../img/map-big.jpg") no-repeat;
+  background: #ccc url("../img/map-big.jpg") no-repeat;
   -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
   z-index: 100;
