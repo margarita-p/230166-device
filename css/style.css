@@ -308,6 +308,7 @@ li.header-user-out {
 }
 
 .header-menu-catalog > a {
+  display: block;
   position: relative;
   margin-left: 60px;
 }
@@ -379,7 +380,6 @@ li.catalog-hover-active a:active {
 }
 
 
-
 /*меню услуг*/
 
 .header-menu-services {
@@ -388,6 +388,7 @@ li.catalog-hover-active a:active {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+
   width: 500px;
   padding: 0;
   margin: 0;
