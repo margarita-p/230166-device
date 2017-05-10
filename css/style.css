@@ -57,6 +57,10 @@ img {
   height: auto;
 }
 
+span.last-letter {
+  letter-spacing: 0;
+}
+
 
 /*_________________header__________________*/
 
@@ -245,13 +249,17 @@ a.main-header-logo {
 }
 
 li.header-user-name  {
+  width: 160px;
   margin-right: 20px;
 }
 
+li.header-user-name a {
+  padding-left: 27px;
+}
+
 li.header-user-out {
-  width: 80px;
+  width: 70px;
   text-align: left;
-  margin-right: auto;
 }
 
 .header-user-out a {
@@ -1425,7 +1433,7 @@ p.slider-feature-info {
   position: relative;
   width: 830px;
   height: auto;
-  margin-bottom: 68px;
+  margin-bottom: 69px;
 }
 
 .sorting::after {
@@ -1589,14 +1597,14 @@ a.sorting-active:active {
   display: block;
   width: 360px;
   margin-left: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 51px;
 }
 
 .catalog-item img {
   display: block;
   width: 360px;
   height: 380px;
-  margin-bottom: 29px;
+  margin-bottom: 33px;
 }
 
 
@@ -1730,7 +1738,7 @@ a.sorting-active:active {
         -ms-flex-pack: center;
             justify-content: center;
   position: relative;
-  margin: 0;
+  margin-top: -11px;
     margin-left: 70px;
     margin-bottom: 73px;
   padding: 0;
@@ -1875,13 +1883,15 @@ a.main-footer-logo {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   margin: 0;
-    margin-bottom: 52px;
+    margin-bottom: 53px;
   padding: 0;
   list-style: none;
 }
 
 .main-footer-menu li {
   margin-right: auto;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .main-footer-menu li:nth-child(3n) {
