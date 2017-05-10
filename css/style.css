@@ -170,6 +170,7 @@ a.main-header-logo {
 .header-form-search input[type="search"]:focus {
   border-bottom: 2px solid #000;
   opacity: 1;
+  outline: none;
 }
 
 .header-form-search input[type="search"]:focus ~ input[type="submit"] {
@@ -199,6 +200,7 @@ a.main-header-logo {
   display: block;
   color: rgba(255, 255, 255, 0.3);
   background-color: #000;
+  outline: none;
 }
 
 
@@ -341,30 +343,29 @@ li.header-user-out {
   z-index: 10;
 }
 
-.menu-catalog-hover ul {
+.menu-catalog-hover li {
   width: 160px;
-  margin: 0;
-    margin-right: 40px;
+  margin-right: 40px;
   padding: 0;
   list-style: none;
 }
 
-.menu-catalog-hover ul:first-child,
-.menu-catalog-hover ul:last-child {
+.menu-catalog-hover li:first-child,
+.menu-catalog-hover li:last-child {
   width: 200px;
 }
 
-.menu-catalog-hover ul:last-child {
+.menu-catalog-hover li:last-child {
   margin-right: 0;
 }
 
-.header-menu-catalog a:hover ~ .menu-catalog-hover {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.menu-catalog-hover a {
+  display: block;
+  word-break: break-all;
 }
 
+
+.header-menu-catalog a:hover ~ .menu-catalog-hover,
 .menu-catalog-hover:hover {
   position: absolute;
   display: -webkit-box;
@@ -372,9 +373,9 @@ li.header-user-out {
   display: flex;
 }
 
-li.catalog-hover-active a,
-li.catalog-hover-active a:hover,
-li.catalog-hover-active a:active {
+a.catalog-hover-active,
+a.catalog-hover-active:hover,
+a.catalog-hover-active:active {
   opacity: 0.3;
   cursor: default;
 }
@@ -388,7 +389,6 @@ li.catalog-hover-active a:active {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-
   width: 500px;
   padding: 0;
   margin: 0;
@@ -414,16 +414,9 @@ li.catalog-hover-active a:active {
 
 .slider {
   position: relative;
-  height: 430px;
-  margin-bottom: 51px;
-}
-
-.slider-inner {
-  position: relative;
   top: -111px;
-  width: 1160px;
-  height: 540px;
-  overflow: hidden;
+  min-height: 524px;
+  margin-bottom: -43px;
 }
 
 .slider-item {
@@ -442,7 +435,7 @@ li.catalog-hover-active a:active {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-   top: 217px;
+   bottom: 186px;
    right: 0;
   width: 160px;
   height: 10px;
@@ -574,6 +567,8 @@ li.catalog-hover-active a:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -581,7 +576,19 @@ li.catalog-hover-active a:active {
 }
 
 .slider-features li {
-  margin-right: 77px;
+  min-width: 140px;
+  margin-right: 20px;
+  padding-bottom: 30px;
+}
+
+.slider-features li:nth-child(2n+3),
+.slider-features li:nth-child(2) {
+  min-width: 120px;
+  margin-right: 20px;
+}
+
+.slider-features li:nth-child(3n) {
+  margin-right: 0;
 }
 
 p.slider-feature-value {
@@ -602,10 +609,6 @@ p.slider-feature-info {
     font-size: 13px;
     line-height: 15px;
     letter-spacing: 0.01em;
-}
-
-.slider-item:nth-child(3) li {
-  margin-right: 45px;
 }
 
 
@@ -696,7 +699,7 @@ p.slider-feature-info {
 
 .services {
   position: relative;
-  height: 288px;
+  min-height: 288px;
   margin-bottom: 94px;
   background-color: #e5e5e5;
 }
@@ -713,7 +716,6 @@ p.slider-feature-info {
 .services-inner {
   position: relative;
     top: -31px;
-  height: auto;
 }
 
 .services-item {
@@ -730,13 +732,19 @@ p.slider-feature-info {
 
 .services-control {
   position: relative;
-    top: -100px;
-  width: 277px;
+    top: -20px;
+  width: 284px;
   margin-right: 118px;
-  padding-top: 80px;
-  padding-bottom: 47px;
-  border-right: 7px solid #000;
   z-index: 1;
+}
+
+.services-control:after {
+  position: absolute;
+  top: -80px;
+  right: 0;
+  width: 7px;
+  height: 320px;
+  background-color: #000;
 }
 
 .services-control label {
@@ -867,11 +875,11 @@ p.slider-feature-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+    justify-content: center;
+      -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   margin-bottom: 64px;
 }
 
@@ -1182,28 +1190,6 @@ p.slider-feature-info {
   border-top: 2px solid #000;
 }
 
-.filter-form p {
-  margin: 0;
-    margin-top: 10px;
-  padding: 0;
-}
-
-.filter-color input,
-.filter-bluetooth input {
-  display: none;
-}
-
-.filter-form label {
-  position: relative;
-  padding-left: 40px;
-  font-family: "Open Sans", Arial, sans-serif;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.01em;
-  color: #000;
-}
-
 
 /*__________Фильтр по стоимости____________*/
 
@@ -1292,56 +1278,91 @@ p.slider-feature-info {
 
 /*Фильтр по цвету*/
 
-.filter-color label::before {
+
+.filter-form p {
+  margin: 0;
+    margin-top: 10px;
+  padding: 0;
+}
+
+.filter-color input,
+.filter-bluetooth input {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.filter-color input ~ label {
+  position: relative;
+  padding-left: 40px;
+  font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+  color: #000;
+}
+
+.filter-color input ~ label::before {
+  display: block;
   position: absolute;
     top: -3px;
     left: 0;
   width: 23px;
   height: 23px;
   background-color: #dbdbdb;
+  z-index: -1;
 }
 
-.filter-color label::after {
+.filter-color input ~ label::after {
   display: none;
   position: absolute;
     top: 5px;
     left: 2px;
   width: 20px;
   height: 12px;
-  background: url("../img/sprite.png") no-repeat center;
+  background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
     background-position: 0 -96px;
+  z-index: -1;
 }
 
-.filter-color label:hover::before {
-  background-color: #cecece;
-}
-
-.filter-color label:active::before {
-  background-color: #c4c4c4;
-}
-
-.filter-color label:active::after {
-  display: block;
-}
-
-.filter-color input:checked ~ label::after {
-  display: block;
-}
-
+.filter-color input ~ label:hover::before,
 .filter-color input:checked ~ label:hover::before {
   background-color: #cecece;
 }
 
+.filter-color input ~ label:active::before,
 .filter-color input:checked ~ label:active::before {
   background-color: #c4c4c4;
+}
+
+.filter-color input ~ label:active::after,
+.filter-color input:checked ~ label::after {
+  display: block;
 }
 
 .filter-color input:checked ~ label:active::after {
   display: none;
 }
 
+.filter-color input:checked ~ label::before {
+  background-color: #dbdbdb;
+}
+
 
 /*Фильтр по bluetooth*/
+
+.filter-bluetooth label {
+  position: relative;
+  padding-left: 40px;
+  font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+  color: #000;
+}
 
 .filter-bluetooth label::before {
   position: absolute;
@@ -1351,6 +1372,7 @@ p.slider-feature-info {
   height: 19px;
   border: 2px solid #c6c6c6;
   border-radius: 50%;
+  z-index: -1;
 }
 
 .filter-bluetooth label::after {
@@ -1362,35 +1384,32 @@ p.slider-feature-info {
   height: 5px;
   border: 2px solid #000;
   border-radius: 50%;
+  z-index: -1;
 }
 
-.filter-bluetooth label:hover::before {
-  border-color: #bcbcbc;
-}
-
-.filter-bluetooth label:active::before {
-  border-color: #acacac;
-}
-
-.filter-bluetooth label:active::after {
-  display: block;
-}
-
-.filter-bluetooth input:checked ~ label::after {
-  display: block;
-}
-
+.filter-bluetooth input ~ label:hover::before,
 .filter-bluetooth input:checked ~ label:hover::before {
   border-color: #bcbcbc;
 }
 
+.filter-bluetooth input ~ label:active::before,
 .filter-bluetooth input:checked ~ label:active::before {
   border-color: #acacac;
+}
+
+.filter-bluetooth input ~ label:active::after,
+.filter-bluetooth input:checked ~ label::after {
+  display: block;
 }
 
 .filter-bluetooth input:checked ~ label:active::after {
   display: none;
 }
+
+.filter-bluetooth input:checked ~ label::before {
+  border-color: #c6c6c6;
+}
+
 
 .filter-form .btn {
   width: 200px;
