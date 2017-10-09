@@ -1,6 +1,6 @@
 # Личный проект «Девайс»
 
-* Студент: [Маргарита  Попова](https://up.htmlacademy.ru/htmlcss/17/user/230166).
+* Студент: [Маргарита  Попова](https://htmlacademy.ru/profile/id230166).
 * Наставник: [Никита Рогатнев](https://htmlacademy.ru/profile/id86119).
 
 ---
